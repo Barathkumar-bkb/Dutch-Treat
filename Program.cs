@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+<<<<<<< HEAD
 namespace Dutch_Treat
 {
     public class Program
@@ -23,4 +24,22 @@ namespace Dutch_Treat
                     webBuilder.UseStartup<Startup>();
                 });
     }
+=======
+namespace DutchTreat
+{
+  public class Program
+  {
+    public static void Main(string[] args)
+    {
+      CreateHostBuilder(args).Build().Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+              webBuilder.UseStartup<Startup>();
+            });
+  }
+>>>>>>> Add project files.
 }
